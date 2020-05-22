@@ -1,0 +1,135 @@
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Styles */
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: hsl(229, 6%, 66%)
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 1rem auto;
+}
+
+/* Feature Header */
+
+.feature-header {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.feature-header__tech {
+    color: hsl(234, 12%, 34%);
+    display: block;
+}
+
+
+/* Card Section */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+
+.cards__item {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 270px;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px hsl(229, 6%, 66%);
+    
+}
+
+
+.cards__item::after {
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+}
+
+
+.cards__item--cyan::after{
+    
+    background: hsl(180, 62%, 55%);
+    
+}
+
+.cards__item--red::after{
+    background: hsl(0, 78%, 62%)
+}
+
+.cards__item--orange::after{
+    background: hsl(34, 97%, 64%)
+}
+
+.cards__item--blue::after{
+    background:  hsl(212, 86%, 64%)
+
+}
+
+
+.cards__item--position{
+    transform: translateY(50%);
+}
+
+
+.cards__title {
+    font-size: .9rem;
+    color: hsl(234, 12%, 34%);
+}
+
+.cards__para {
+    font-size: .7rem;
+    max-width: 200px;
+    margin-bottom: 2.8em;
+}
+
+.cards__item img {
+   align-self: flex-end;
+   max-width: 50px;
+}
+
+/* Footer */
+
+.attribution { 
+    font-size: 11px; text-align: center;
+ }
+    
+ .attribution a { 
+     color: hsl(228, 45%, 44%); 
+    }
+
+
+
+@media (max-width: 675px) {
+    .cards__item--position{
+        transform: translateY(0);
+    }
+    
+}
